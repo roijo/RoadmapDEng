@@ -1,13 +1,13 @@
 %%{init: {"flowchart": {"rankSpacing": 140, "nodeSpacing": 35}, "themeVariables": {"fontSize": "32px"}}}%%
 
-graph TD
+graph RL
     A[1. Foundations 1-2 Months] --> B[2. Data Engineering Fundamentals 2-3 Months]
     B --> C[3. Machine Learning Core 2-3 Months]
     C --> D[4. Advanced Topics Multi-Cloud 3-4 Months]
     D --> E[5. Specializations Best Practices 2-3 Months]
     E --> F[6. Job Application Continuous Learning]
 
-    %% children order reversed to produce a left-right mirrored layout
+    %% children order reversed to produce a leftward expansion (right-to-left layout)
     A --> A5[Resources: MS Learn AI-900 Google Cloud ML DataCamp]
     A --> A4[Hands-On: ML Model in Jupyter Azure Credits]
     A --> A3[Cloud Intro: Azure GCP Free Tiers]
