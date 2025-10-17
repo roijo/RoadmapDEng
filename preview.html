@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Roadmap Preview</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 100%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Engineering Roadmap</h1>
+        <div class="mermaid">
+graph TB
+    Start[Data Engineering Roadmap]
+    
+    Start --> Fundamentals
+    Start --> Programming
+    Start --> Databases
+    Start --> DataProcessing
+    Start --> CloudPlatforms
+    Start --> Tools
+    Start --> BestPractices
+    Start --> Advanced
+    
+    %% Fundamentals
+    Fundamentals[Fundamentals]
+    Fundamentals --> CompSci[Computer Science Basics]
+    Fundamentals --> Networking[Networking Basics]
+    Fundamentals --> Linux[Linux/Unix]
+    Fundamentals --> Git[Version Control - Git]
+    
+    %% Programming Languages
+    Programming[Programming Languages]
+    Programming --> Python[Python]
+    Programming --> SQL[SQL]
+    Programming --> Scala[Scala]
+    Programming --> Java[Java]
+    
+    Python --> PythonLibs[Python Libraries]
+    PythonLibs --> Pandas[Pandas]
+    PythonLibs --> NumPy[NumPy]
+    PythonLibs --> PySpark[PySpark]
+    
+    %% Databases
+    Databases[Databases & Storage]
+    Databases --> Relational[Relational Databases]
+    Databases --> NoSQL[NoSQL Databases]
+    Databases --> DataWarehouses[Data Warehouses]
+    Databases --> DataLakes[Data Lakes]
+    
+    Relational --> PostgreSQL[PostgreSQL]
+    Relational --> MySQL[MySQL]
+    Relational --> Oracle[Oracle]
+    
+    NoSQL --> MongoDB[MongoDB]
+    NoSQL --> Cassandra[Cassandra]
+    NoSQL --> Redis[Redis]
+    NoSQL --> Elasticsearch[Elasticsearch]
+    
+    DataWarehouses --> Snowflake[Snowflake]
+    DataWarehouses --> Redshift[Amazon Redshift]
+    DataWarehouses --> BigQuery[Google BigQuery]
+    DataWarehouses --> Synapse[Azure Synapse]
+    
+    %% Data Processing
+    DataProcessing[Data Processing]
+    DataProcessing --> BatchProcessing[Batch Processing]
+    DataProcessing --> StreamProcessing[Stream Processing]
+    DataProcessing --> ETL[ETL/ELT]
+    
+    BatchProcessing --> Spark[Apache Spark]
+    BatchProcessing --> Hadoop[Hadoop/MapReduce]
+    
+    StreamProcessing --> Kafka[Apache Kafka]
+    StreamProcessing --> Flink[Apache Flink]
+    StreamProcessing --> KinesisStreams[AWS Kinesis]
+    StreamProcessing --> PubSub[Google Pub/Sub]
+    
+    ETL --> Airflow[Apache Airflow]
+    ETL --> dbt[dbt - Data Build Tool]
+    ETL --> Dagster[Dagster]
+    ETL --> Prefect[Prefect]
+    
+    %% Cloud Platforms
+    CloudPlatforms[Cloud Platforms]
+    CloudPlatforms --> AWS[Amazon Web Services]
+    CloudPlatforms --> GCP[Google Cloud Platform]
+    CloudPlatforms --> Azure[Microsoft Azure]
+    
+    AWS --> S3[S3]
+    AWS --> EC2[EC2]
+    AWS --> Lambda[Lambda]
+    AWS --> Glue[AWS Glue]
+    AWS --> EMR[EMR]
+    
+    GCP --> GCS[Cloud Storage]
+    GCP --> Dataflow[Dataflow]
+    GCP --> Dataproc[Dataproc]
+    GCP --> CloudFunctions[Cloud Functions]
+    
+    Azure --> BlobStorage[Blob Storage]
+    Azure --> DataFactory[Data Factory]
+    Azure --> Databricks[Azure Databricks]
+    Azure --> AzureFunctions[Azure Functions]
+    
+    %% Tools & Technologies
+    Tools[Tools & Technologies]
+    Tools --> Containerization[Containerization]
+    Tools --> Orchestration[Orchestration]
+    Tools --> Monitoring[Monitoring & Logging]
+    Tools --> DataQuality[Data Quality]
+    Tools --> BI[Business Intelligence]
+    
+    Containerization --> Docker[Docker]
+    Containerization --> Kubernetes[Kubernetes]
+    
+    Monitoring --> Prometheus[Prometheus]
+    Monitoring --> Grafana[Grafana]
+    Monitoring --> ELKStack[ELK Stack]
+    Monitoring --> Datadog[Datadog]
+    
+    DataQuality --> GreatExpectations[Great Expectations]
+    DataQuality --> Soda[Soda]
+    DataQuality --> MonteCarlo[Monte Carlo]
+    
+    BI --> Tableau[Tableau]
+    BI --> PowerBI[Power BI]
+    BI --> Looker[Looker]
+    BI --> Metabase[Metabase]
+    
+    %% Best Practices
+    BestPractices[Best Practices]
+    BestPractices --> DataModeling[Data Modeling]
+    BestPractices --> DataGovernance[Data Governance]
+    BestPractices --> Security[Security & Privacy]
+    BestPractices --> Testing[Testing & Validation]
+    BestPractices --> Documentation[Documentation]
+    
+    DataModeling --> DimensionalModeling[Dimensional Modeling]
+    DataModeling --> Normalization[Normalization]
+    DataModeling --> SchemaDesign[Schema Design]
+    
+    DataGovernance --> DataCatalog[Data Catalog]
+    DataGovernance --> Lineage[Data Lineage]
+    DataGovernance --> Metadata[Metadata Management]
+    
+    Security --> Encryption[Encryption]
+    Security --> AccessControl[Access Control]
+    Security --> GDPR[GDPR/Compliance]
+    
+    %% Advanced Topics
+    Advanced[Advanced Topics]
+    Advanced --> MachineLearning[ML Engineering]
+    Advanced --> RealTimeAnalytics[Real-time Analytics]
+    Advanced --> DataMesh[Data Mesh]
+    Advanced --> LakehouseArch[Lakehouse Architecture]
+    
+    MachineLearning --> MLflow[MLflow]
+    MachineLearning --> FeatureStore[Feature Store]
+    MachineLearning --> ModelDeployment[Model Deployment]
+    
+    RealTimeAnalytics --> ClickHouse[ClickHouse]
+    RealTimeAnalytics --> Druid[Apache Druid]
+    RealTimeAnalytics --> Pinot[Apache Pinot]
+    
+    %% Certifications
+    Certifications[Certifications]
+    Start --> Certifications
+    
+    Certifications --> AWSCerts[AWS Certifications]
+    Certifications --> GCPCerts[GCP Certifications]
+    Certifications --> AzureCerts[Azure Certifications]
+    Certifications --> DatabricksCerts[Databricks Certifications]
+    
+    AWSCerts --> AWSDataAnalytics[AWS Data Analytics Specialty]
+    AWSCerts --> AWSDE[AWS Data Engineer Associate]
+    
+    GCPCerts --> GCPDataEngineer[GCP Data Engineer Professional]
+    
+    AzureCerts --> AzureDataEngineer[Azure Data Engineer Associate]
+    
+    DatabricksCerts --> DataEngineerAssociate[Data Engineer Associate]
+    DatabricksCerts --> DataEngineerProfessional[Data Engineer Professional]
+    
+    %% Styling
+    classDef fundamentalStyle fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    classDef programmingStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef databaseStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef processingStyle fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef cloudStyle fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    classDef toolsStyle fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef practicesStyle fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+    classDef advancedStyle fill:#ede7f6,stroke:#311b92,stroke-width:2px
+    classDef certStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    
+    class Fundamentals,CompSci,Networking,Linux,Git fundamentalStyle
+    class Programming,Python,SQL,Scala,Java,PythonLibs,Pandas,NumPy,PySpark programmingStyle
+    class Databases,Relational,NoSQL,DataWarehouses,DataLakes,PostgreSQL,MySQL,Oracle,MongoDB,Cassandra,Redis,Elasticsearch,Snowflake,Redshift,BigQuery,Synapse databaseStyle
+    class DataProcessing,BatchProcessing,StreamProcessing,ETL,Spark,Hadoop,Kafka,Flink,KinesisStreams,PubSub,Airflow,dbt,Dagster,Prefect processingStyle
+    class CloudPlatforms,AWS,GCP,Azure,S3,EC2,Lambda,Glue,EMR,GCS,Dataflow,Dataproc,CloudFunctions,BlobStorage,DataFactory,Databricks,AzureFunctions cloudStyle
+    class Tools,Containerization,Orchestration,Monitoring,DataQuality,BI,Docker,Kubernetes,Prometheus,Grafana,ELKStack,Datadog,GreatExpectations,Soda,MonteCarlo,Tableau,PowerBI,Looker,Metabase toolsStyle
+    class BestPractices,DataModeling,DataGovernance,Security,Testing,Documentation,DimensionalModeling,Normalization,SchemaDesign,DataCatalog,Lineage,Metadata,Encryption,AccessControl,GDPR practicesStyle
+    class Advanced,MachineLearning,RealTimeAnalytics,DataMesh,LakehouseArch,MLflow,FeatureStore,ModelDeployment,ClickHouse,Druid,Pinot advancedStyle
+    class Certifications,AWSCerts,GCPCerts,AzureCerts,DatabricksCerts,AWSDataAnalytics,AWSDE,GCPDataEngineer,AzureDataEngineer,DataEngineerAssociate,DataEngineerProfessional certStyle
+        </div>
+    </div>
+</body>
+</html>
