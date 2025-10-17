@@ -43,23 +43,6 @@ graph TB
   F --> F2[Portfolio: GitHub Projects LinkedIn Networking]
   F --> F3[Resources: Reddit Communities MS Google Portals]
 
-  %% visual/decoration: class and styles to simulate a shadow/emphasis on the parent nodes
-  classDef parentShadow fill:#ffffff,stroke:#999,stroke-width:1px,rx:6,ry:6;
+  %% visual/decoration: class and styles to emphasize the parent nodes (safe properties)
+  classDef parentShadow fill:#ffffff,stroke:#666,stroke-width:2px,rx:6,ry:6;
   class A,B,C,D,E,F parentShadow;
-
-  %% stronger border + attempt drop-shadow (may be ignored by some renderers)
-  style A stroke:#666,stroke-width:2px,fill:#ffffff;
-  style B stroke:#666,stroke-width:2px,fill:#ffffff;
-  style C stroke:#666,stroke-width:2px,fill:#ffffff;
-  style D stroke:#666,stroke-width:2px,fill:#ffffff;
-  style E stroke:#666,stroke-width:2px,fill:#ffffff;
-  style F stroke:#666,stroke-width:2px,fill:#ffffff;
-
-  %% optional: try filter-based drop-shadow (works in some Mermaid setups / browsers)
-  %% if your renderer strips 'filter', it will simply ignore these lines without breaking the graph
-  style A filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
-  style B filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
-  style C filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
-  style D filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
-  style E filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
-  style F filter:drop-shadow(4px 6px 8px rgba(0,0,0,0.18));
